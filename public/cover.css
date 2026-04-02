@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
+  background-color: rgb(175, 207, 219);
+}
+.container {
+  position: relative;
+}
+.navBar {
+  margin-top: 0px;
+  padding-top: 0px;
+  height: 2.5rem;
+  width: 100%;
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(220, 243, 243);
+  border-radius: 10px;
+}
+.navBar span {
+  width: 40%;
+}
+.navBar a {
+  color: white;
+  margin: 2px;
+  padding-top: 4px;
+  text-align: center;
+  height: 1.8rem;
+  width: 4%;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: small;
+  background-color: rgb(14, 112, 55);
+}
+a:hover {
+  background-color: rgb(14, 73, 39);
+}
+button:hover {
+  background-color: rgb(14, 73, 39);
+}
+.header {
+  margin: 4%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(191, 221, 221);
+  box-shadow: 5px 5px 10px gray;
+}
+.left {
+  margin: 2%;
+  padding: 2%;
+}
+.left button {
+  height: 3.5rem;
+  width: 12rem;
+  color: white;
+  background-color: rgb(14, 112, 55);
+}
+.left a {
+  text-decoration: none;
+  height: 3.5rem;
+  width: 12rem;
+  color: white;
+  background-color: rgb(14, 112, 55);
+}
+.img1 {
+  height: auto;
+  width: 100%;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.img2 {
+  width: 10px;
+  height: 10px;
+}
+.top {
+  display: flex;
+  margin: 0% 10%;
+  background-color: transparent;
+}
+.top-left {
+  height: 20rem;
+  margin: 1%;
+  width: 90%;
+  padding: 5%;
+  text-align: left;
+  background-color: rgb(223, 236, 239);
+  border-radius: 40px;
+}
+.top-left button {
+  height: 1.5rem;
+  margin: 3%;
+  border: none;
+  color: rgb(20, 102, 117);
+  background-color: rgb(204, 235, 235);
+  border-radius: 5px;
+}
+.top-right {
+  height: 20rem;
+  margin: 1%;
+  width: 40%;
+  padding: 5%;
+  text-align: left;
+  background-color: rgb(223, 236, 239);
+  border-radius: 40px;
+}
+.top-right button {
+  height: 1.5rem;
+  margin: 3%;
+  border: none;
+  color: rgb(20, 102, 117);
+  background-color: rgb(204, 235, 235);
+  border-radius: 5px;
+}
+.bottom {
+  display: flex;
+  margin: 0% 10%;
+  background-color: transparent;
+}
+.bottom-left {
+  height: 20rem;
+  margin: 1%;
+  width: 40%;
+  padding: 5%;
+  text-align: left;
+  background-color: rgb(223, 236, 239);
+  border-radius: 40px;
+}
+.bottom-left button {
+  height: 1.5rem;
+  margin: 3%;
+  border: none;
+  color: rgb(20, 102, 117);
+  background-color: rgb(204, 235, 235);
+  border-radius: 5px;
+}
+.bottom-right button {
+  height: 1.5rem;
+  margin: 3%;
+  border: none;
+  color: rgb(20, 102, 117);
+  background-color: rgb(204, 235, 235);
+  border-radius: 5px;
+}
+.img2 {
+  height: auto;
+  width: 30%;
+}
+.bottom-right {
+  display: flex;
+  height: 20rem;
+  margin: 1%;
+  width: 70%;
+  padding: 5%;
+  text-align: left;
+  background-color: rgb(223, 236, 239);
+  border-radius: 40px;
+}
+.bottom-right .side{
+    margin: 4%;
+    padding: 25;
+}
+.side .p1{
+    width: 55%;
+    height: 1rem;
+    border-radius: 40px;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    color: red;
+    background-color: rgb(225, 187, 187);
+}
+.footer {
+  background-color: #45696b;
+  color: white;
+  padding: 30px 20px 10px;
+  margin-top: 30px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links {
+  display: flex;
+ 
+  gap: 18px;
+}
+
+.footer-links a {
+  color: #dbd9df;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  font-weight: 400;
+}
+
+.footer-social .icons span {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-social .icons span:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+}

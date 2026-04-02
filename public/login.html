@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-In-Page</title>
+    <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    <div class="container">
+      <div class="left">
+        <div class="heading">
+          <img src="contact.svg" alt="contact" />
+          <h3>Clinical Precision</h3>
+        </div>
+        <div class="middle">
+          <h1>Monthly Sales Directory.</h1>
+          <p>
+            Access your curated pharmaceutical inventory data and sales
+            performance metrices with laboratory-grade accuracy
+          </p>
+        </div>
+        <div class="footer">
+          <img class="img1" src="Sign-Up.png" alt="Sign-Up" />
+        </div>
+      </div>
+      <div class="right">
+        <form id="loginForm">
+          <div class="first">
+            <h1>Sign In</h1>
+            <p>Enter your credentials to manage directory entries</p>
+          </div>
+          <div class="second">
+            <h4>Enter The Email</h4>
+            <input
+              id="emails"
+              class="username"
+              type="text"
+              placeholder="Enter The Username"
+            />
+          </div>
+          <div class="password-label">
+            <h4>Password</h4>
+            <h4>Forgot Password?</h4>
+          </div>
+
+          <div class="pass">
+            <input
+              id="password"
+              class="password-input"
+              type="password"
+              placeholder="Enter a Password "
+            />
+            <button type="button" id="togglePassword">👁</button>
+          </div>
+          <div class="stay">
+            <input type="checkbox" />
+            <p>stay signed for 30 days</p>
+          </div>
+          <div class="Enter">
+            <button id="Enter" onclick="login(event)">Log in</button>
+          </div>
+          <div class="last">
+            <p>Don't have an access terminal?</p>
+            <a href="signup.html">Create Account</a>
+          </div>
+        </form>
+      </div>
+    </div>
+<script src="login.js"></script>
+
+</body>
+</html>

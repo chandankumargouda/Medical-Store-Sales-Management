@@ -1,0 +1,177 @@
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2d5d5;
+}
+.container {
+  display: flex;
+  width: 80%;
+  height: auto;
+  margin-top: 5%;
+  box-shadow: 5px 5px 10px gray;
+}
+.left {
+  padding: 20px;
+  height: auto;
+  width: 50%;
+  background-color: #a2c2c2;
+}
+.img1 {
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 20px;
+}
+.heading {
+  display: flex;
+  gap: 10px;
+}
+h3 {
+  color: rgb(60, 95, 95);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: 100%;
+  width: 50%;
+  background-color: #f8fafa;
+}
+.second .username {
+  cursor: pointer;
+  height: 20px;
+  width: 100%;
+  background-color: transparent;
+}
+.password-label {
+  cursor: pointer;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.pass .password-input {
+  cursor: pointer;
+
+  height: 20px;
+  width: 100%;
+  opacity: 0.8;
+  background-color: transparent;
+}
+.stay {
+  margin: 10px 0px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.Enter button {
+  height: 50px;
+  width: 300px;
+  color: white;
+  background-color: rgb(22, 98, 49);
+  border: none;
+  cursor: pointer;
+}
+.last {
+ display: flex;
+ justify-content: center;
+ gap: px;
+ text-align: center;
+}
+.last a {
+  text-decoration: none;
+  margin: 15px;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .img1 {
+    width: 100%;
+  }
+
+  .second input,
+  .pass input,
+  .Enter button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .heading {
+    justify-content: center;
+  }
+
+  .middle h1 {
+    font-size: 24px;
+  }
+
+  .img1 {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .second input,
+  .pass input,
+  .Enter button {
+    width: 100%;
+  }
+
+  .password {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .stay {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .middle h1 {
+    font-size: 20px;
+  }
+
+  .first h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .Enter button {
+    height: 45px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,179 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c2d5d5;
+}
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 1100px;
+  height: auto;
+  margin-top: 2%;
+  box-shadow: 5px 5px 10px gray;
+}
+input {
+  width: 80%;
+  height: 1.5rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.left {
+  padding: 20px;
+  height: 80%;
+  width: 60%;
+  background-color: #aacece;
+}
+.img1 {
+  width: 100%;
+  height: 25rem;
+}
+
+img {
+  width: 20px;
+}
+.header{
+    display: flex;
+    gap: 10px;
+    color: rgb(26, 96, 96);
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 100px;
+  height: 100%;
+  width: 50%;
+  background-color: #f8fafa;
+}
+.role{
+    display: flex;
+    justify-content: space-evenly;
+}
+.admin{
+    text-align: center;
+    width: 25%;
+    height: 1rem;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.operator{
+    text-align: center;
+    width: 25%;
+    height: 1rem;
+    padding: 20px;
+    border: 1px solid black;
+}
+.last{
+    display: flex;
+}
+.last a {
+  text-decoration: none;
+  margin: 15px; 
+}
+.password {
+  display: flex;
+  gap: 10px;
+}
+
+.password input {
+  width: 100%;
+}
+button{
+  margin: 20px;
+  height:3rem;
+  width: 80%;
+  border: none;
+  color: #f8fafa;
+  background-color: rgb(9, 66, 47);
+}
+.create{
+  margin: 0px;
+  padding: 0px;
+}
+.admin, .operator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin:hover, .operator:hover {
+  background-color: #dff5f5;
+  border: 1px solid teal;
+}
+button:hover {
+  background-color: rgb(5, 40, 30);
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .right {
+    padding: 30px;
+  }
+
+  .img1 {
+    height: 18rem;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .middle h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .middle p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .password {
+    flex-direction: column;
+  }
+
+  .role {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .admin, .operator {
+    width: 80%;
+  }
+
+  button {
+    height: 2.5rem;
+    font-size: 0.9rem;
+  }
+}

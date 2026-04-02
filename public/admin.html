@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Admin Panel</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Admin</h2>
+      <a href="#">Dashboard</a>
+      <a href="#">Add Medicine</a>
+      <a href="#">Sales</a>
+      <button onclick="logout()">Log Out</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h1>Add Medicine</h1>
+
+      <!-- Form -->
+      <div class="form-container">
+        <h3>Manage Medicine</h3>
+    <input type="hidden" id="edit-id">
+        <input type="text" id="name" placeholder="Medicine Name" />
+        <input type="number" id="price" placeholder="Cost Price" />
+        <input type="number" id="gst" placeholder="GST %" />
+        <input type="number" id="discount" placeholder="Discount %" />
+        <input type="date" id="expiry" />
+        <input type="nummber" id="quantity" />
+
+        <button id="submitBtn" onclick="saveMedicine()">Save Medicine</button>
+    
+    <button id="cancelBtn" type="button" onclick="cancelEdit()" style="display:none; background-color: grey;">
+        Cancel Edit
+    </button>
+      </div>
+
+      <!-- Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>GST</th>
+            <th>Discount</th>
+            <th>Final Price</th>
+            <th>Expiry</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

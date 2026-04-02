@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Operator Page</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        display: flex;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: 200px;
+        background: #2c3e50;
+        color: white;
+        height: 100vh;
+        padding: 20px;
+      }
+
+      .sidebar h2 {
+        text-align: center;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .sidebar li:hover {
+        background: #34495e;
+      }
+
+      /* Main */
+      .main {
+        flex: 1;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* Input Section */
+      .input-box {
+        margin: 20px 0;
+        padding: 15px;
+        background: #f4f4f4;
+        border-radius: 8px;
+      }
+
+      .input-box input {
+        padding: 10px;
+        margin-right: 10px;
+      }
+
+      .input-box button {
+        padding: 10px 15px;
+        background: teal;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      /* Buttons */
+      button {
+        padding: 6px 12px;
+        margin: 3px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      /* Edit button */
+      button:first-child {
+        background: orange;
+        color: white;
+      }
+
+      /* Delete button */
+      button:last-child {
+        background: red;
+        color: white;
+      }
+
+      /* Hover effects */
+      button:hover {
+        opacity: 0.8;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+        background: white;
+      }
+
+      th {
+        background: #2c3e50;
+        color: white;
+      }
+
+      td,
+      th {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+
+      /* Input section */
+      .input-box {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .input-box input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Add button */
+      .input-box button {
+        background: teal;
+        color: white;
+      }
+
+      /* Grand total */
+      #grandTotal {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      #logout {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li>Home</li>
+        <li>Inventory</li>
+       <li onclick="goToSales()">Sales</li>
+        <li>
+          <a
+            href="cover.html"
+            style="
+              background: #15135e;
+              color: white;
+              padding: 10px 15px;
+              border-radius: 6px;
+              text-decoration: none;
+              font-weight: bold;
+              display: inline-block;
+            "
+          >
+            Log Out
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <h2>Available Medicines</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>GST</th>
+            <th>Discount</th>
+            <th>Final Price</th>
+            <th>Expiry</th>
+            <th>Stock</th>
+          </tr>
+        </thead>
+        <tbody id="operatorTableBody"></tbody>
+      </table>
+      <!-- Input Section -->
+      <div class="input-box">
+        <input type="text" id="medName" oninput="searchMedicine()" placeholder="Search medicine name...">
+        <input type="number" id="qty" placeholder="Quantity" />
+        <button onclick="addToCart()">Add</button>
+      </div>
+
+      <!-- Cart Table -->
+      <h2>Sales Directory</h2>
+
+      <table id="cartTable">
+        <thead>
+          <tr>
+            <th>Medicine Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Expiry</th>
+            <th>Total Cost</th>
+          </tr>
+        </thead>
+        <tbody id="saleBody"></tbody>
+      </table>
+      <div id="grandTotal">
+  <h2 id="totalText">Grand Total: ₹ 0</h2>
+  <canvas id="saleChart" style="max-width: 600px; margin-top: 20px;"></canvas>
+</div>
+    </div>
+
+    
+<script src="operator.js"></script>
+</body>
+
+</html>
